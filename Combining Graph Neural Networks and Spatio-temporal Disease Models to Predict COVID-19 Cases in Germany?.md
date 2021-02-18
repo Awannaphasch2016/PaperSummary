@@ -1,126 +1,126 @@
 #table of content
-section 1
-    introcution and related work
-section 2 
-    data
-section 3 
-    lays out the ground work contribution proposed in Section 4
-section 4 
-    describe proposed model
-section 5  
-    apply the propsed approach to Germany weely data
+* section 1
+    * introcution and related work
+* section 2 
+    * data
+* section 3 
+    * lays out the ground work contribution proposed in Section 4
+* section 4 
+    * describe proposed model
+* section 5  
+    * apply the propsed approach to Germany weely data
 
 #introduction 
 
 #key contribution
-we proposed a trade-off between statistical/epidemiological models and machine learning model
-    statistical/epidemiological models often can't directly incroporate unstructured data source
-        including relational data that my encode human mobility 
-    machine learning  yeirld better prediction by exploiting thse data strcuture, but lack of intuitive interpretability
-purpose a novel fusion appraoch that directly combine dyadic mobility and connectedness data 
-we combine GNN and epidemiological models to simultaneously account for network-values data and talbular data. 
-we provide a forcast of weekly COVID-19 cses with disease onset at the local level of 401 federal districts in Germany
+* we proposed a trade-off between statistical/epidemiological models and machine learning model
+    * statistical/epidemiological models often can't directly incroporate unstructured data source
+        * including relational data that my encode human mobility 
+    * machine learning  yeirld better prediction by exploiting thse data strcuture, but lack of intuitive interpretability
+* purpose a novel fusion appraoch that directly combine dyadic mobility and connectedness data 
+* we combine GNN and epidemiological models to simultaneously account for network-values data and talbular data. 
+* we provide a forcast of weekly COVID-19 cses with disease onset at the local level of 401 federal districts in Germany
  as provided by the Robert-Koch Institute
-the primary goal our our applicatin is modeling the rates fo infections rather than the raw observed count.
+* the primary goal our our applicatin is modeling the rates fo infections rather than the raw observed count.
 
 #related work
-paper to read 
-    [8-9] use mobility data
-    [10] estimate the effects of non-pharaceutical intervention on COVID-19
-    [13] forecating the spread of covid nder different reopening strategies
-    [18] use mobility and aggreagted friendship networks to discover how these networks derive the infection rate on the lcoal level 
+* paper to read 
+    * [8-9] use mobility data
+    * [10] estimate the effects of non-pharaceutical intervention on COVID-19
+    * [13] forecating the spread of covid nder different reopening strategies
+    * [18] use mobility and aggreagted friendship networks to discover how these networks derive the infection rate on the lcoal level 
      of federal dsitrubtion in Germany
         also use colocation network 
-    [35] shows that the central indicator of the infection occurrence is the number of people with disease onset at a specific day
-[41-47] a recent trend is the cobination of neural networks with statistical regression model in various ways 
+    * [35] shows that the central indicator of the infection occurrence is the number of people with disease onset at a specific day
+* [41-47] a recent trend is the cobination of neural networks with statistical regression model in various ways 
 
 #terminnology
-about data
-    colcoation probability
-    colocation network
-     this indicate the prob of two random persons from two district to meet one another during a given week     
-    colocation matrix 
-        the probability of an arbitrary person to meet another person from the same or different district
-    social connectedness network
-        network is a soail connection between the distict via facebook friendship
-        this pairwise time constant index related to the relative friendship stregth between two districts 
-        network is weighted.
-    social connectedness index 
-    staying put   
-        weekly percentage of peopel staying put as a measure for people's compiance (Facebook users0 with 
+* about data
+    * colcoation probability
+    * colocation network
+     * this indicate the prob of two random persons from two district to meet one another during a given week     
+    * colocation matrix 
+        * the probability of an arbitrary person to meet another person from the same or different district
+    * social connectedness network
+        * network is a soail connection between the distict via facebook friendship
+        * this pairwise time constant index related to the relative friendship stregth between two districts 
+        * network is weighted.
+    * social connectedness index 
+    * staying put   
+        * weekly percentage of peopel staying put as a measure for people's compiance (Facebook users0 with 
          social distancing
-        we derive the weekly district-speicif measure by averagin daily measure provided by FAcebook.
-        In this context, 'staying put' is defined as being observed in one 0.6km x 0.6km square throughout a day 
-    disease onset
-        the disease oneset is the first time that there has been notes to be a "change" in one's usualy health 
+        * we derive the weekly district-speicif measure by averagin daily measure provided by FAcebook.
+        * In this context, 'staying put' is defined as being observed in one 0.6km x 0.6km square throughout a day 
+    * disease onset
+        * the disease oneset is the first time that there has been notes to be a "change" in one's usualy health 
          status with the identified signs and or symptoms being able to directly attributable to a specific disease process 
-about math
-    aleatoric uncetainty
-    zero-inflated distribution
-        distribution that allows for frequent zero-value observation.
-        it is often used as a model for the number of events in a specifict time period
-    zero-inflation probability
-    zero-inflated Poisson (ZIP) distribution
-    probability mass function (PMF)
-        is a function that gives the probability that a discrete random variable is exactly equal to some value.
-        aka discreate desnsity function
-    negative binomial (NB) distribution
-    radial basis function
-    epistemic uncetainty
-    Hessian of the negative log-likelihood        
-    deep embedding
-about model 
-    additive effect
-        when two predictors do not interact, we say that each predictor has an "additive effect' on the response.
-            More formally, a regression model contains additive effects if the response function can be written as a 
+* about math
+    * aleatoric uncetainty
+    * zero-inflated distribution
+        * distribution that allows for frequent zero-value observation.
+        * it is often used as a model for the number of events in a specifict time period
+    * zero-inflation probability
+    * zero-inflated Poisson (ZIP) distribution
+    * probability mass function (PMF)
+        * is a function that gives the probability that a discrete random variable is exactly equal to some value.
+        * aka discreate desnsity function
+    * negative binomial (NB) distribution
+    * radial basis function
+    * epistemic uncetainty
+    * Hessian of the negative log-likelihood        
+    * deep embedding
+* about model 
+    * additive effect
+        * when two predictors do not interact, we say that each predictor has an "additive effect' on the response.
+            * More formally, a regression model contains additive effects if the response function can be written as a 
              sum of function of the predictor varialbes
-    additive predictor 
-        structure additive predictor
-            representa mooth additive effectos of input features and can be reresented in a neural network.
+    * additive predictor 
+        * structure additive predictor
+            * representa mooth additive effectos of input features and can be reresented in a neural network.
             it can be represented in neural network term
-    distributional regression
-        a modeling approach  
-        in constrast to other regresssion appraoches that (do only related the mean of an outcome ariable to certain features, 
+    * distributional regression
+        * a modeling approach  
+        * in constrast to other regresssion appraoches that (do only related the mean of an outcome ariable to certain features, 
          distributional regression also accounts for the uncertainly of the data distribution, known as aleatoric uncetainty
-    semi-stuctured deep distribution regression
-    SDDR 
-        combines neural enworks and structued additive distibutional regression by embedding the statistical regression in 
+    * semi-stuctured deep distribution regression
+    * SDDR 
+        * combines neural enworks and structued additive distibutional regression by embedding the statistical regression in 
          the neural network and ensure the identificability of the reression model part.
-        SDDR extend the additive prediction of each distributional parametres with its 'structured effect' to laten features
+        * SDDR extend the additive prediction of each distributional parametres with its 'structured effect' to laten features
             ,so called, 'unstructured effects' taht are learned by one or more DNN
-        to disentangle the structured model parts from the unstructured parts, and orthogonalization cell is used to ensure 
+        * to disentangle the structured model parts from the unstructured parts, and orthogonalization cell is used to ensure 
          identifiability of the structured model effect 
              
 
 
 #standard and benchmark
-    dataset
-        Facebook data on human mobility and connectedness 
-            [28]
-            spatial data from Data for Good program 
-                it is on the NUTS 3 level
-                encompass n = 401 federal districts
-                collected from mobile phoen location traces of FAcebook users that opted in the Location Histroy setting 
-                     on the mobile Facbook app
-        data on the pandemic's state from Robert-Koct-institue.
-            Time-series of daily COVId-19 infections
-    models
-        baseline model
-            mean of a sliding window apprach applied to the given training data set (MEAN)
-                mean of last week for each of the subgroups = prediction 
-                    4 subgroups includes age, gender, etc
-        statistical baseline model 
-            generalized additive model (GAM)
-                inspired by work from [18], which modeling the mean of a negative binomial distribution using various smooth predictors and 
-                 tensor-product splines.
-        state of the art machine learning baseline
-            XGBoost (gradient boosting tree.)
-        deep learning baseline 
-            valina deep learning (multi-layer)
-        GNN baseline
-            GNN 
-    Evaluation         
-        MSE score
+* dataset
+    * Facebook data on human mobility and connectedness 
+        * [28]
+        * spatial data from Data for Good program 
+            * it is on the NUTS 3 level
+            * encompass n = 401 federal districts
+            * collected from mobile phoen location traces of FAcebook users that opted in the Location Histroy setting 
+                 on the mobile Facbook app
+    * data on the pandemic's state from Robert-Koct-institue.
+        * Time-series of daily COVId-19 infections
+* models
+    * baseline model
+        * mean of a sliding window apprach applied to the given training data set (MEAN)
+            * mean of last week for each of the subgroups = prediction 
+                * 4 subgroups includes age, gender, etc
+    * statistical baseline model 
+        * generalized additive model (GAM)
+            * inspired by work from [18], which modeling the mean of a negative binomial distribution using various smooth predictors and 
+             tensor-product splines.
+    * state of the art machine learning baseline
+        * XGBoost (gradient boosting tree.)
+    * deep learning baseline 
+        * valina deep learning (multi-layer)
+    * GNN baseline
+        * GNN 
+* Evaluation         
+    * MSE score
 
 
 # methodology
