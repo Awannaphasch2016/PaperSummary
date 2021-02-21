@@ -127,3 +127,5 @@
 # frequently ask question 
 * what is relevance index?
 * how does SIR being implemented with deep learning techno?
+
+    yoyo
