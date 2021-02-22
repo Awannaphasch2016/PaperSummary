@@ -17,7 +17,16 @@
 * Model
     * GNN based model
         * [1], [2], [3], [4]
-
+    * baseline
+        * temporal 
+            * RNN + Attn
+                * Paper: Long Short-Term MemoryNetworks for Machine Reading
+        * spatial temporal 
+            * St-GCN
+                * Paper: Spatio-temporal graph convolutional networks: A deep learning framework for traffic forecasting.
+        * CNN + RNN
+            * CNNRNN-Res
+                * Paper Deep Learning for Epidemiological Predictions
 * dataset 
     * policy dataset 
     * mobility dataset
@@ -27,11 +36,12 @@
 
 
 # METHODOLOGY
-# RESULT
-# FREQUENCY ASK QUESTION 
-
-# MY MODEL DESIGN
-## sytem requirement
+## techniques that other papers uses
+* capture temoral info 
+    * paper: Cola-GNN: Cross-location Attention based Graph Neural Networks for Long-term ILI Prediction.md
+        * use multi-scale dilated convolution to capture temporal data
+## MY MODEL DESIGN
+### sytem requirement
     * the model must use as many types of network as possible
     * the model must use transfer learning
         * to tranfer learned knowledge about "stage" of the pandemic spread
@@ -46,7 +56,7 @@
     * the model must deal with few dataset
     * the model must deal with noisy data
 
-## possible input data
+### possible input data
     * non-graph input
         * demographics
         * economics
@@ -62,4 +72,18 @@
         * social connectedness network
         * colocation network 
         * geographic similarity
+
+# RESULT
+# Furthre Reading
+* understand rnn model.
+    * goal
+        * to be aware of parameters that I can model. 
+    * how to formulate rnn equation from scratch
+* how does attention in time seires work?
+    * what are types of attention in time series?
+        * additional attention
+            * reference:
+                * Paper: Neural machine translation by jointly learning to align and translate
+
+# FREQUENCY ASK QUESTION 
 
