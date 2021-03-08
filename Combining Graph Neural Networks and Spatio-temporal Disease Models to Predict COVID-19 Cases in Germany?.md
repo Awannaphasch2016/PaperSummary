@@ -69,8 +69,9 @@
     * epistemic uncetainty
     * Hessian of the negative log-likelihood        
     * deep embedding
+
 * about model 
-    * additive effect
+    * additive effect 
         * when two predictors do not interact, we say that each predictor has an "additive effect' on the response.
             * More formally, a regression model contains additive effects if the response function can be written as a 
              sum of function of the predictor varialbes
@@ -78,7 +79,7 @@
         * structure additive predictor
             * representa mooth additive effectos of input features and can be reresented in a neural network.
             it can be represented in neural network term
-    * distributional regression
+    * distributional regression 
         * a modeling approach  
         * in constrast to other regresssion appraoches that (do only related the mean of an outcome ariable to certain features, 
          distributional regression also accounts for the uncertainly of the data distribution, known as aleatoric uncetainty
@@ -104,6 +105,7 @@
                  on the mobile Facbook app
     * data on the pandemic's state from Robert-Koct-institue.
         * Time-series of daily COVId-19 infections
+
 * models
     * baseline model
         * mean of a sliding window apprach applied to the given training data set (MEAN)
@@ -119,11 +121,12 @@
         * valina deep learning (multi-layer)
     * GNN baseline
         * GNN 
+
 * Evaluation         
     * MSE score
 
 
-# methodology
+# here> methodology
 * data preprocessing
     * Facebook data on human mobility and connectedness 
         * to quantify the social and mobility pattenrso nthe regional level, we use data on friendship ties, colcoation probability
@@ -150,6 +153,7 @@
 * social connectedness network
     * utilizing information from a snapshot of all facebook connections within Germany of April 2020
     * we derived a Social Connectedness Index
+
 * model 
     * effect smoothness can be achieved by a specifically designed network regulatization term
     * we make use of semi-structued deep distributiona lregression [SDDR, 48]
@@ -191,6 +195,7 @@
                 * this proved to help numberical stability
             * Graph Neural network
                 * we use model proposed in [60] because it can handle edge attributes and relatively large graphs.
+
     * Uncertaintey quantification
         * epistemic uncertainty 
             * we can derive epistemic uncertainty of parts of the model throught its connection to statistical model

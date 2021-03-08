@@ -11,6 +11,7 @@
     * it is a time-domain meric that is able to quantify the stochastic process memory.
 
 # STANDARD AND BASELINE
+
 * dataset
     * WHO dataset 
         * reported by 210 countries and territories worldwide
@@ -20,12 +21,15 @@
     * Bi-LSTM
     * GRU
     * variation auto encoder (VAE)
+
 * evaluation
+
     * root mean square (RMSE)
     * RASLE 
         * root mean square but calculated in the log scale
     * mean absolute percentage error (MAPE)
     * mean absolute error (MAE)
+
 # METHODOLOGY
 * data exploration
     * to check asymmetry of the data distribution around the sample mean. 

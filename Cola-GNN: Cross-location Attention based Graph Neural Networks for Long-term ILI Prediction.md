@@ -10,10 +10,13 @@
 * details of experiment 
 * analyze result
 * summary
+
 # introduction
 * Influenza outbreaks also exhibit long seasonnality.
     * about 13 weeks in United state.
+
 # related work
+
 * spatio-temporal epidemic prediction
     * fields or Topics that use spatio-temporal prediction
         * societal event forecasting
@@ -47,7 +50,7 @@
             * without manual integration of seasonal trends, most statistical models fail to achieve high accuracy
     2. the influence of other locations often changes over time.  
     3. spatio-temporal model is often explored in environment that have more data (than pandemic)
-# terminology
+# terminology 
 * ILI
     * influenza-like illness (ILI)
 * dynamic location-aware attention machanism
@@ -58,7 +61,7 @@
 * [21] multie-scale dilate dconvolutional module
     * consist of multiple parallel convolutional layers with the same filter and stride size but different dilation rate
             * capture short-term and long-term lcoal termporal dependencies 
-# How does author come up with his/her ideas?
+# How does author come up with his/her ideas? 
 * limitation of existing works are as followed
     * limited long-term prediction performance
     * fails to capture spatio-temporal dependencies in data
@@ -82,6 +85,7 @@
         * problem
             * rnn doesn't consider cross-spatial effects in long term diesease propagation
 # standard and baseline
+
 * Data
     * epidemic related dataset from United state and Japan
         * Infectious Disease Weekly Report (IDWR) in Japan dataset
@@ -94,6 +98,7 @@
     * RMSE
     * MAE
     * Pearson's Correlation (PCC)
+
 * baseline Models
     * Autoregressive (AR)
     * Global Autoregressive (GAR)
@@ -106,6 +111,7 @@
     * CNNRNN-Res
     * LSTNet
     * St-GCN
+
 # methodology
 * goal
     * focus on longer term (2-15 weeks) prediction from 20 weeks of data
@@ -138,7 +144,6 @@
                     * consist of multiple parallel convolutional layers with the same filter and stride size but different dilation rate
             * capture short-term and long-term lcoal termporal dependencies 
             * we apply 1D CNN filter with different dilation to every row of X to capture temporal dependencies at different level of granularity
-            * 
         * global graph message passing
             * combine the temporal features and location-aware attenions. 
     * loss function

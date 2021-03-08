@@ -112,7 +112,7 @@
         * one can see that ergion with the high relative error are the ones with the fewest cases. On the other hands, the reinos iwth 
          * the highest number of cases tends tohave much smaller relative error (less than  20% )
         * MPNN+TL performans the best 
-        * MPNN peformans between than TL_BASE
+        * MPNN peformans better than TL_BASE
         * TL_BASE is the best non graph baselines
 # FREQUENCY ASK QUESTION 
 * what is model agonostic meta-learning?

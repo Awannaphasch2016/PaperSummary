@@ -20,9 +20,11 @@
 * data preparation
     * locations are separated into location with current existed case and no existed case.
 # result
+
 * results
     * In the area with confirmed case, higher rate of high prevalent symptoms are detected 
      and lower rate of low prevalents  symptoms are detected
     * higher percentage of symptomes among people who were in home isolation than among those 
      who were not  
+
 # frequently ask question 

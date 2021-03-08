@@ -1,7 +1,7 @@
 # note to self: no smaller detail. only big picture. smaller detail should be 
 * read from the paper itself
 # introduction
-* extreme lockdown is shown to be veryfeffective to slow down the spread of SARS-COV2
+* extreme lockdown is shown to be very effective to slow down the spread of SARS-COV2
     
 # terminology
 * cc = confirmed cases
@@ -26,6 +26,7 @@
             
 # dataset
 # methodology
+
 * environment factors which govern
     * epidemic evolution process (exogenous factors) Or 
         * Dominant factors of the transmission
@@ -89,6 +90,7 @@
         * gross domenstic product per capita
             * we collect the data from the united states census bureau [25]
 * modeal 
+
     * we use GRU
         * double-channel strucutre in GPU module 
             * a sequential data point would enter channel-1 if there is a restruction policy 
@@ -103,6 +105,7 @@
          * environmentl factors produces interpretable weights on each input dimension 
             embedding representation of environmental factors is taken as "the initialization 
              of the hidden state in the GRU model" (this process is called "kick-start" mechanism)
+
     * task
         * Goal: 
             1. predict the epidemic evolution

@@ -36,6 +36,7 @@
 * epidemic studies methods
     * Kaplan's model
         * Kaplan's model is used to focus on the spread pattern to specific group of people
+
 * category of literature for forecasting
     * categorized by dataset
         * Big data
@@ -43,13 +44,15 @@
     * categorized by forecasting technique 
         * stochastic theory/mathematical models
         * data science/machine learning techniuqe
+
+
 * important parameters for forecasting
     * daily death count
     * Number of carriers
     * Incubation period
     * Environmental parameters 
         * eg temerature, humidity, wind speed
-    * Awareness about COVID-19
+    * here> Awareness about COVID-19
     * Medical facilities available 
     * Social distancing, quarantine, isolation
     * Transmission rate
@@ -61,14 +64,16 @@
     * Report time
     * Government policies
     * other
+
 * outcoes of these studies are very much useful for multipel purposes like 
-    * controlling the spread of COVID-19 globally
-    * controling the spread of COVID-19 for a specific country,
+    * controlling the spread of covid-19 globally
+    * controling the spread of covid-19 for a specific country,
     * deciding its impact
     * builing environmental conditions (metrological condition) and the spread rate
     * deciding reproduction number
-    * establishing the correlation between quarantine and isolation with the spread of COVID-19
-    * trend analysis of COVID-19 pandemic and tracking the spread of coroanvrisu locally and globaly
+    * establishing the correlation between quarantine and isolation with the spread of covid-19
+    * trend analysis of covid-19 pandemic and tracking the spread of coroanvrisu locally and globaly
+
 * How forecasting can help decision/policy making
     * control measure
         * qurantine
@@ -76,12 +81,9 @@
         * contact tracing
         * recommendation in terms of metrological conditions
 
-
-
-
-
 # INTRODUCTION
 ## story/history
+
 * epidemic history
     * 1300: black death
         * affected older people and stresors
@@ -107,8 +109,10 @@
         * at the of publication (sep-oct 2020), 36.7 million death
         * > 100 countries are affected
         * incubation time is longer longest
+
 # REFERENCES
 # RELATED WORK
+
 * category of literature for forecasting
     * categorized by dataset
         * Big data
@@ -135,9 +139,11 @@
     * categorized by forecasting technique 
         * stochastic theory/mathematical models
         * data science/machine learning techniuqe
+
 # KEY CONTRIBUTION
 
 # FUTURE RESEARCH 
+
 * research should also includes the following factors including
     * genetic relation to geographic location
         * genetic relations pertaining the geographical location need to be 
@@ -146,25 +152,28 @@
         * civilization, society, culter
     * treatment options
         * current research assume that vaccination option will be avialbe for the next one year
+
 # CHALLENGES
-    * factors that make forecasting model hard 
-        * incubation period is alot longer 
-        * tracking of the people
-        * * no definitive treatment
-        * the high fatality rate in susceptible people
-        * longer incubation period
-        * lack of proper data  
-            * china dataset is overly used in researched.
-            * few dataset is available at the time.
-        * proper lockdown
-            * how to implement it 
-        * the optimal period of lockdown
-        * aware but do not casue panic 
-            * lets citizen knows without causing panic
-        * essential services identification and delivery
-            * what are essential services?
-        * crystal clear communication of message
-            * how to avoid misinformation and miscommunication?
+
+* factors that make forecasting model hard 
+    * incubation period is alot longer 
+    * tracking of the people
+    * * no definitive treatment
+    * the high fatality rate in susceptible people
+    * longer incubation period
+    * lack of proper data  
+        * china dataset is overly used in researched.
+        * few dataset is available at the time.
+    * proper lockdown
+        * how to implement it 
+    * the optimal period of lockdown
+    * aware but do not casue panic 
+        * lets citizen knows without causing panic
+    * essential services identification and delivery
+        * what are essential services?
+    * crystal clear communication of message
+        * how to avoid misinformation and miscommunication?
+
 # TERMINOLOGY
 * other terms
     * metroloical conditions

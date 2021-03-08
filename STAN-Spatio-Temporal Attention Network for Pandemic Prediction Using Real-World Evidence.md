@@ -29,7 +29,10 @@
 * model 
 * evaluation
     * MSE
+
+
 # METHODOLOGY
+
 ## note: the study has been detemined by UIUC IRB as non-human subject research
 * task 
     * predict number of infected pateitns for a fixed preiodd into the future with tranmission dynamic of epidemiological models constraint

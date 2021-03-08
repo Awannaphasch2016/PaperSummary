@@ -22,5 +22,10 @@
 # STANDARD AND BASELINE
 # METHODOLOGY
 # RESULT
+* Q1: Is DeepCovid able to anticipate trend changes?
+* Q2. Does DeepCovid capture finer grain patterns?
+* Q3. How does DeepCovid perform in US National short term forecasting?
+* Q4. does DeepCovid's emphasis on short -term forecastin scarifice longer-term performance?
+* Q5. Can DeepCovid explains its prediction to epidemiological exports for interpretation?
 # FREQUENCY ASK QUESTION 
 
