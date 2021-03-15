@@ -11,7 +11,6 @@
     * apply the propsed approach to Germany weely data
 
 #introduction 
-
 #key contribution
 * we proposed a trade-off between statistical/epidemiological models and machine learning model
     * statistical/epidemiological models often can't directly incroporate unstructured data source
@@ -126,7 +125,7 @@
     * MSE score
 
 
-# here> methodology
+# methodology
 * data preprocessing
     * Facebook data on human mobility and connectedness 
         * to quantify the social and mobility pattenrso nthe regional level, we use data on friendship ties, colcoation probability

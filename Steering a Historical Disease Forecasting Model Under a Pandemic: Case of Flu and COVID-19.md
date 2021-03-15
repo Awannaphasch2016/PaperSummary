@@ -46,7 +46,18 @@
     * we embed calinetw with a rnn including domain-informed spatial constraints to capture the spatiotemporal dynamic across different wILI regions
     * we employ a knowledge distillation scheme to explicitly transfer historical WILIk knowledge to our target model in CALI-NET
         * this alleviating the effect of paucity of COVID-ILI data
+# FURTHER READING
+* transfer learning within heterogenous domains.
+    * (Moon and Carbonell 2017)
+        * proposed to learn feature mapping in a common-subspace.
+    * Li et al 2019
+        * proposed transfer learning bia deep lmatrix completion
+    * Yan et at 2018
+        * formulated this problem as an optimal transport problem using the entropic Gromov-Wasserstein discrepancy.
+* Knowledge Distillation (KD).
+    * 
 # FUTURE DIRECTION
+* Unlink our paper, most KD work has been appied to classification, efforts for adapting KD for regression have been sprse.
 # CHALLENGES
 # TERMINOLOGY
 * inflenza like illness (ILI)
@@ -55,8 +66,15 @@
 * effect of paucity
     * [[validate]] what is it?
 # STANDARD AND BASELINE
-
 # METHODOLOGY
+* task
+    * wILI forecasting
+* features 
+    * using various signal
+        * COVID line list data
+        * test availablity.
+        * crowd-sourced symptomatic data
+        * social media
 # RESULT
 # FREQUENCY ASK QUESTION 
 
