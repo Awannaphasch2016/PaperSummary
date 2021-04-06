@@ -1,3 +1,6 @@
+# REFERENCES
+* url
+    * https://arxiv.org/pdf/2101.00661.pdf
 #table of content
 * section 1
     * introcution and related work
@@ -54,6 +57,7 @@
         * the disease oneset is the first time that there has been notes to be a "change" in one's usualy health 
          status with the identified signs and or symptoms being able to directly attributable to a specific disease process 
 * about math
+    * missing at random analysis
     * aleatoric uncetainty
     * zero-inflated distribution
         * distribution that allows for frequent zero-value observation.
@@ -68,8 +72,11 @@
     * epistemic uncetainty
     * Hessian of the negative log-likelihood        
     * deep embedding
+    * point mass distribution
 
 * about model 
+    * structure effect.
+    * non-structure effect.
     * additive effect 
         * when two predictors do not interact, we say that each predictor has an "additive effect' on the response.
             * More formally, a regression model contains additive effects if the response function can be written as a 
@@ -124,23 +131,51 @@
 * Evaluation         
     * MSE score
 
-
 # methodology
 * data preprocessing
     * Facebook data on human mobility and connectedness 
         * to quantify the social and mobility pattenrso nthe regional level, we use data on friendship ties, colcoation probability
          ,adn district-specific data on the proportion of peopl staying put provided by Facebook.
-    * Robert-Koct-Instritue dataset
-        * we obtain the number of people with symptom onset and registered cases of COVID-19 grouped by age, gender and federal district 
-         (NUT-3 level) for each day
-        * we observed that mainly people aged between 15 and 58 years are actice users of FAcebook 
-        * we limit our analysis to corresponding age groups, namely, people with age between 15,35 and 36,59
-        * we impute the missing values by learning a proabilistic model of the delay between disease onset and registration dat.
-            * the data of disease onset is not known in about 30% of the cases.
-            * we sampled form the estimated distribution of delay times.
-        * we compute population density
-        * we use population density compute ratio between infected population and total population
-            * In this settings, one can assuem that not the count but rate of infections in a specific district and group carries vital information
+    * time-series of daily COVID_19 infections 
+        * [35] shows that the central indicator of the infection occurrence is the number of people with disease onset at a specific day
+        * Robert-Koct-Instritue dataset
+            * we obtain the number of people with symptom onset and registered cases of COVID-19 grouped by age, gender and federal district 
+             (NUT-3 level) for each day
+            * we observed that mainly people aged between 15 and 58 years are actice users of FAcebook 
+            * we limit our analysis to corresponding age groups, namely, people with age between 15,35 and 36,59
+            * imputation 
+                * we impute the missing values by learning a proabilistic model of the delay between disease onset and registration dat.
+                    * the data of disease onset is not known in about 30% of the cases.
+                    * we sampled form the estimated distribution of delay times.
+                * sampling processing (refer to [18])
+                    * imputation procedure relies on all oservations to be missing at random
+                        * . We need to check this assumption
+                            1. we argue for stochasticity of mechanism driving the binary 
+                                indicator whether the target variable is 
+                                (date aof disease onset) missing.
+                            2. we perform "missing at random analysis" 
+                                * to discover which covariates affect this mechanims.
+                                * consecuitvely, we emply the detected covariates in the imputation
+                                    procedure.
+                    * there are 3 stages of disease: time of infection, disease onset,
+                        and registration at local health authorities.
+                        * disease onset stage is in some case latent.
+                        * incubation period (not observed)
+                            * infection -> disease onset 
+                        * test delay (partially observed)
+                            * disease -> registration 
+                        * incubation period and test delay are stochatic, so we know that missing data is 
+                            random
+                    * establisehd that missing value are random, we need to identify the covariates driving 
+                        the missing values' mechanism.
+                        1. we generate binary indicator of whther test delay was observed for each case.
+                        2. logistic regrssion with 7 different set of covariates are applied to 
+                            predict binary indicator 
+                        3. best set of covaraites are used for data imputation model.
+                * for imputation model we parameterised mean of test delay and its scale factor.
+            * we compute population density
+            * we use population density compute ratio between infected population and total population
+                * In this settings, one can assuem that not the count but rate of infections in a specific district and group carries vital information
 * Network contruction 
     * colocation network
         * we obtain for each week a colocation matrix
@@ -152,7 +187,6 @@
 * social connectedness network
     * utilizing information from a snapshot of all facebook connections within Germany of April 2020
     * we derived a Social Connectedness Index
-
 * model 
     * effect smoothness can be achieved by a specifically designed network regulatization term
     * we make use of semi-structued deep distributiona lregression [SDDR, 48]
@@ -194,7 +228,6 @@
                 * this proved to help numberical stability
             * Graph Neural network
                 * we use model proposed in [60] because it can handle edge attributes and relatively large graphs.
-
     * Uncertaintey quantification
         * epistemic uncertainty 
             * we can derive epistemic uncertainty of parts of the model throught its connection to statistical model
@@ -235,7 +268,8 @@
         * Epistenmic uncertainty
             * the higher the infection rate was tin the previous week, higher the rpedictions are the upcoming week
                 * [18] identified this feature as a principal driver of the structured model part of our model
-
+* [18] 
+    * shows that Gini index of meeting probability attribution proved to be a primary driver of the infection rates. 
 #frequently asked question
 * does the facebook user's data represent the actual population?
     * what is the age distibution of Facebook user?
@@ -246,7 +280,19 @@
 * negative binomail distribution vs poisson distribution?
     * negative binomial is often chosen over the Poisson becuase it is more flexible by allowing to account for overdispension.
 * what is spline function        
+    * what is the relationship between non-linear effect and smoothness?
+    * how are basis evaluation learned via end-to-end learning process? 
+    what are differences between each spline function?
+        * its properties?
+    * TP-Spling
+    * Bivariate spline
+    * what is point warping?
+        * inverse function? forward function?
+        * control point.
 * offset?
     * [[re-wrriten]] it is refered often in the modle but i am not sure what is it
+* how did they combine structured and non-structued data? 
+* what is the purpose of "uncertain qualification section"?
+* what is the purposed of orthogonalization?
 
 

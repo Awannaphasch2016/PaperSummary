@@ -1,0 +1,17 @@
+# INTRODUCTION
+# REFERENCES
+# TERMINOLOGY
+# RELATED WORK
+# KEY CONTRIBUTION
+# HOW AUTHOR COME UP WITH THIS IDEA
+# FURTHER READING
+# FUTURE DIRECTION
+# CHALLENGES
+# STANDARD AND BASELINE
+# METHODOLOGY
+* model
+    * age and gender strucuted spatio-temporal model 
+    * isotropic smooth effects
+    * estimation
+# RESULT
+# FREQUENCY ASK QUESTION 

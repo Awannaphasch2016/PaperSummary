@@ -2,6 +2,8 @@
 # ToC
 # INTRODUCTION
 # REFERENCES
+* url
+    * https://arxiv.org/pdf/2009.08388.pdf
 # RELATED WORK
 # KEY CONTRIBUTION
 # CHALLENGES
@@ -69,15 +71,19 @@
     * each country is represented as a graph
     * series of graph is created per tiem step 
     * graph is directed
+    * nodes
+        * nodes represent the NUT2 regions.
+        * nodes features contains the number of cases for each one of the past n days in region u.
+            * we use the cases of multipel days instead of just the day before the predictionbecause case reporting is highly ireregular betwen days
     * edges 
-        * edges are weighted  
         * edges capture the mobility patterns.
+        * edges are weighted by mobility value.
         * self loop is allowed. 
             * self loop = mobility behavior within the regions.
-    * the mobility between regions are multiplied by the number of cases of regions for each time step
-        * this provides a relative score expression how many infected individuals might have moved between nodes
-        * using this, nodes can be interpreted as total cased of infected individuals
-        * number of days used to computer are smooth using serveral days of data because daily data is highly irregular 
+        * the mobility between regions are multiplied by the number of cases of regions for each time step
+            * this provides a relative score expression how many infected individuals might have moved between nodes
+            * using this, nodes can be interpreted as total cased of infected individuals
+            * [[re-written]] normalized by all population should be better than using number of population alone.
 * model 
     * note: different models are trained for each value of T (time ahead to be predicted)
     * message passing neural network (MPNN)
@@ -101,9 +107,15 @@
             * our inuition is that a odel trained in the whole cycle or an advanced stage of the epidemic can capture patterns of 
              * its different phaes (which is information that has not yet obtained from the taret country)
         * we separate our data into tasks and propose an adaption of MAML
-        additional pre-processing for MPNN + TL
+            * the idea behind transfer is the following
+                * each country has different raining set of increasing size ( as the train days increase) 
+                    as well as shorter- and longer-term target (next day, two days ahead and so on)
+                    * shorter and longer-term info can be transfered.
+                    * infection behavior for lack of dataset during the early stage of pandemic can also be transfered.
+                        * all regions begin with no infected case.
 # RESULT
-* Experiment 1: 
+
+*  Experiment 1: 
     * result
         * Our error function trats all regions euqivalently, independent of the region-speicfic poupulation and the number of cases. 
             * i.e. region with 10 cases per day should not be treated the same as a region with 1000.
@@ -114,6 +126,7 @@
         * MPNN+TL performans the best 
         * MPNN peformans better than TL_BASE
         * TL_BASE is the best non graph baselines
+
 # FREQUENCY ASK QUESTION 
 * what is model agonostic meta-learning?
 

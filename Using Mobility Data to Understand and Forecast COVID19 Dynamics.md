@@ -1,5 +1,7 @@
 # INTRODUCTION
 # REFERENCES
+* url
+    * https://www.medrxiv.org/content/10.1101/2020.12.13.20248129v1.full.pdf
 # STANDARD AND BASELINE
 * dataset
     * Google COVID-19 Aggregated Mobility Research Dataset.
@@ -44,14 +46,21 @@
     * state level daily new cases for 7, 14, 21, 28 days forcasting.
 * preprocessing
     * feature encoding 
-        * LSTM cell is used to embed temporal information for each time step to all nodes
+        * LSTM cell is used to embed temporal information for each time step to all nodes and edges. From all of the cited paper, this is the only paper that apply LSTM directly to edges features.
             * edge feature vector include temoporal information from the past
             * node feature vectors include temporal information from the past
     * graph construction
         * edge 
             * edge represent mobility
+            * the graph edge features are derived from the inter-region mobility be aggregating Google mobility data to the state and county level.
+                * at a certain time point t, if there ias any human movment from region j to region i in th epast H days, we add a directed edges e_ji that connect region j and i.
+            * edge weight is calculated based on active cases mobility
+                * edges weight is multiplepd by node's active case ratio. It can be computed as followed $$\left.f_{j i}^{a c t i v e}(t)=\frac{N_{j}^{a c t i v e}(t)}{N_{j}^{\text {popu }}} * f_{j i}(t)\right)$$
+                    * $N_j_{active}(t)$ is the number of active cases which is cumulative cases minus recovered cases and deaths 
+                    * $N_j_{popu}$ is population of region j.
         * node 
             * node represent state
+            * we include daily new case count, new death count, and intra-region mobility flow
 * architecture
     * models variation
         * GNN-dmob (proposed method)
@@ -63,7 +72,7 @@
                 * average of mobility graphs from a certain period.
                     * [[re-written]] I assume that this is average of mobiility of each states across time.
         * GNN-att
-            * inspired by GNN-adj
+            * inspired by cola-CNN
             * implement an attention-based model that llow the model to learn an attention matrix of all region.
     * implementation 
         * GNN-dmob GNN-smob, GNN-att, and GNN-adj

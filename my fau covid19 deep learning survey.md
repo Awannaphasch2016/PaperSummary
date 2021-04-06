@@ -27,6 +27,23 @@
 * individuals 
     * Alexander Rodríguez
         * https://www.cc.gatech.edu/~acastillo41/
+* while writing overlaef
+    fritz2021combining       | Combining Graph Neural Networks and Spatio-temporal Disease Models to Predict COVID-19 Cases in Germany
+    kapoor2020examining      | Examining covid-19 forecasting using spatio-temporal graph neural networks
+    gao2020stan              | Stan: Spatio-temporal attention network for pandemic prediction using real world evidence
+    panagopoulos2020transfer | Transfer Graph Neural Networks for Pandemic Forecasting
+    wang2020using            | Using Mobility Data to Understand and Forecast COVID19 Dynamics
+    deng2020cola             | Cola-GNN: Cross-location Attention based Graph Neural Networks for Long-term ILI Prediction
+    zhang2021dynamic         | Dynamic Virtual Graph Significance Networks for Predicting Influenza
+    cao2020spectral          | Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting
+    la2020epidemiological    | An Epidemiological Neural network exploiting Dynamic Graph Structured Data applied to the COVID-19 outbreak
+* network construction
+    * normalization
+    * mobility
+    * hybrid or pure?
+    * check network, node, edges tables.
+
+
 # RELATED WORK
 # KEY CONTRIBUTION
 # CHALLENGES
