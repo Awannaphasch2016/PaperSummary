@@ -77,7 +77,15 @@
             * https://www.nature.com/articles/s41598-020-79677-1
         * google search
             * https://www.google.com/search?q=transfer+learning+from+clustering&rlz=1C1CHBF_enUS941US941&oq=transfer+learning+from+clustering&aqs=chrome..69i57j0i22i30.5826j0j7&sourceid=chrome&ie=UTF-8 
+        * article 
+            * transfer learning for time-series prediction
+                * https://towardsdatascience.com/transfer-learning-for-time-series-prediction-4697f061f000
+            * flow forecast
+                * https://towardsdatascience.com/transfer-learning-for-time-series-forecasting-51f023bc159c
 # RELATED WORK
+* Article: transfer learning: the dos and don'ts
+    * In general use [[differential leraning rate]], because, in practce, there are too many options to freeze
+        layers.
 # REQUIREMENTS
 * system requirement 
     * predicted trend should prefer smoothness.
@@ -186,6 +194,7 @@
         3.2.2 applied transfer learning to members within the same group.
              * description
                   * this step will predict individual trend.
+
 # RESULT
 * Q1: Is DeepCovid able to anticipate trend changes?
 * Q2. Does DeepCovid capture finer grain patterns?

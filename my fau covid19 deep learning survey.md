@@ -1,4 +1,15 @@
 # REFERENCES
+* reading paper
+    * United We Stand: Transfer Graph Neural Networks for Pandemic Forecasting
+    * Graph Message Passing with Cross-location Attentions for Long-term ILI Prediction
+    * Regional now- and forecasting for data reported with delay: A case study in COVID-19 infections
+    * Nowcasting fatal COVID-19 infections on a regional level in Germany.
+    * STELAR: Spatio-temporal Tensor Factorization with Latent Epidemiological Regularization
+    * RNN . . . region i region j Location aware Attention i j T Temporal Convolution K Graph Message Passing
+        Prediction for region j K
+    * DEFSI: Deep Learning Based Epidemic Forecasting with Synthetic Information 
+    * TDEFSI: Theory Guided Deep Learning Based Epidemic Forecasting with Synthetic Information
+    * DSANet: Dual Self-Attention Network for Multivariate Time Series Forecasting
 * Papers
     * already collected citation 
         * [1] Examining COVID-19 Forecasting using Spatio-Temporal Graph.md
@@ -29,14 +40,24 @@
         * https://www.cc.gatech.edu/~acastillo41/
 * while writing overlaef
     fritz2021combining       | Combining Graph Neural Networks and Spatio-temporal Disease Models to Predict COVID-19 Cases in Germany
+        Fritz and Dorigatti at el.
     kapoor2020examining      | Examining covid-19 forecasting using spatio-temporal graph neural networks
+        Kapoor and Ben at el.
     gao2020stan              | Stan: Spatio-temporal attention network for pandemic prediction using real world evidence
+        Gao et al.
     panagopoulos2020transfer | Transfer Graph Neural Networks for Pandemic Forecasting
+        Panagopoulos et al.
     wang2020using            | Using Mobility Data to Understand and Forecast COVID19 Dynamics
+        Wang, Ben, and Adiga et al.
     deng2020cola             | Cola-GNN: Cross-location Attention based Graph Neural Networks for Long-term ILI Prediction
-    zhang2021dynamic         | Dynamic Virtual Graph Significance Networks for Predicting Influenza
+        Deng et al.
     cao2020spectral          | Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting
+        Cao, Wand et al.
     la2020epidemiological    | An Epidemiological Neural network exploiting Dynamic Graph Structured Data applied to the COVID-19 outbreak
+        La Gatta et al. 
+
+    zhang2021dynamic         | Dynamic Virtual Graph Significance Networks for Predicting Influenza
+        Zhange et al.
 * network construction
     * normalization
     * mobility
