@@ -78,8 +78,8 @@
         * google search
             * https://www.google.com/search?q=transfer+learning+from+clustering&rlz=1C1CHBF_enUS941US941&oq=transfer+learning+from+clustering&aqs=chrome..69i57j0i22i30.5826j0j7&sourceid=chrome&ie=UTF-8 
         * article 
-            * transfer learning for time-series prediction
-                * https://towardsdatascience.com/transfer-learning-for-time-series-prediction-4697f061f000
+            * here> transfer learning for time-series prediction
+                * here> https://towardsdatascience.com/transfer-learning-for-time-series-prediction-4697f061f000
             * flow forecast
                 * https://towardsdatascience.com/transfer-learning-for-time-series-forecasting-51f023bc159c
 # RELATED WORK
