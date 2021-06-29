@@ -80,3 +80,5 @@
     * For both USA and Italy, KL divergences states that the predicted geospatial probability distribution of total infection caese nearly matches with the acutal probability distributio.j
     * a slight deviation of KL in the prediction for these pixels shoots up the MAPE.
 # FREQUENCY ASK QUESTION 
+* this paper
+    * how is image fed?

@@ -174,7 +174,7 @@
                         3. best set of covaraites are used for data imputation model.
                 * for imputation model we parameterised mean of test delay and its scale factor.
             * we compute population density
-            * we use population density compute ratio between infected population and total population
+   {         * we use population density compute ratio between infected population and total population
                 * In this settings, one can assuem that not the count but rate of infections in a specific district and group carries vital information
 * Network contruction 
     * colocation network

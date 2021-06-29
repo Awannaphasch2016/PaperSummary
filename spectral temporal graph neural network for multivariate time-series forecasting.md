@@ -1,5 +1,14 @@
 # STATUS
 * incomplete. stop at the begining of "StemGNN Block" section
+# Citation
+
+    * @article{cao2021spectral,
+      title={Spectral temporal graph neural network for multivariate time-series forecasting},
+      author={Cao, Defu and Wang, Yujing and Duan, Juanyong and Zhang, Ce and Zhu, Xia and Huang, Conguri and Tong, Yunhai and Xu, Bixiong and Bai, Jing and Tong, Jie and others},
+      journal={arXiv preprint arXiv:2103.07719},
+      year={2021}
+    }
+
 # INTRODUCTION
 # REFERENCES
 * url

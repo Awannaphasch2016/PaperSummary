@@ -17,13 +17,6 @@
     * transfer learning for time series 
         * We do have certain components that people traditionally decompose time series into such as 
             seasonality, trend and remainder
-        * Paper: Reconstruction and Regression Loss for Time-Series Transfer Learning
-            * explore creating a specialized loss function that helps to facilitate positive 
-                transfer through a decoupling process
-            * use initial model to extract general features in conjunction with the reconstruction loss
-                before using a time series specific model for forecasting
-            * challenges
-                * this technique is limited to the single variate time sereis.
 # REFERENCES
 * article
     * time series + deep leanring 
@@ -67,21 +60,52 @@
             * https://www.sciencedirect.com/science/article/pii/S1201971220301508
 * transfer learning 
     * ref 
-        * transfer learning: the dos and don'ts
-            * https://medium.com/starschema-blog/transfer-learning-the-dos-and-donts-165729d66625
-        * ensemble transfer learning for the prediction of anti-cancer drug response
-            * https://www.nature.com/articles/s41598-020-74921-0
-        * transfer learning with an Ensemble of Backgroud task
-            * https://people.csail.mit.edu/lpk/papers/MarxRosensteinKaelblingDietterich-final.pdf
-        * sequential transfer learning based on heirarchical clustering for improved performance in deep elarning basd food segmentation
-            * https://www.nature.com/articles/s41598-020-79677-1
-        * google search
-            * https://www.google.com/search?q=transfer+learning+from+clustering&rlz=1C1CHBF_enUS941US941&oq=transfer+learning+from+clustering&aqs=chrome..69i57j0i22i30.5826j0j7&sourceid=chrome&ie=UTF-8 
-        * article 
-            * here> transfer learning for time-series prediction
-                * here> https://towardsdatascience.com/transfer-learning-for-time-series-prediction-4697f061f000
-            * flow forecast
-                * https://towardsdatascience.com/transfer-learning-for-time-series-forecasting-51f023bc159c
+        * finished 
+            * sequential transfer learning based on heirarchical clustering for improved performance in deep elarning basd food segmentation
+                * https://www.nature.com/articles/s41598-020-79677-1
+            * transfer learning with an Ensemble of Backgroud task
+                * url
+                    * https://people.csail.mit.edu/lpk/papers/MarxRosensteinKaelblingDietterich-final.pdf
+                * note
+                    * this approach of transfer learning with and Ensemble of Background task. 
+        * unfinished
+            * paper 
+                * here> APPLIED TIME-SERIES TRANSFER LEARNING
+                    * https://openreview.net/pdf?id=BklhkI1wz
+                * LEARNING TO CLUSTER IN ORDER TO TRANSFER ACROSS DOMAINS AND TASKS
+                    * https://arxiv.org/pdf/1711.10125.pdf
+                * survee on transfer learning (2009)
+                    * https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf
+                * Paper: Reconstruction and Regression Loss for Time-Series Transfer Learning
+                    * explore creating a specialized loss function that helps to facilitate positive 
+                        transfer through a decoupling process
+                    * use initial model to extract general features in conjunction with the reconstruction loss
+                        before using a time series specific model for forecasting
+                    * challenges
+                        * this technique is limited to the single variate time sereis.
+                * transfer learning: the dos and don'ts
+                    * https://medium.com/starschema-blog/transfer-learning-the-dos-and-donts-165729d66625
+                * ensemble transfer learning for the prediction of anti-cancer drug response
+                    * https://www.nature.com/articles/s41598-020-74921-0
+                * A novel transfer learning framework for time series forecasting
+                    *
+                    https://www.sciencedirect.com/science/article/pii/S095070511830251X?casa_token=XeHctaNXsO4AAAAA:fcXv_RxjJ9l3bRtLokOAT37veRSnvOBtsttcR5H0ETjo1o4-Rm08q7tN1KF2eP8hfgr06Wh3PaY
+                * connected paper search 
+                    * https://www.connectedpapers.com/search?q=APPLIED%20TIME-SERIES%20TRANSFER%20LEARNING
+            * video
+                * youtube search
+                    * https://www.youtube.com/results?search_query=transfer+learning+time+series
+                * conference 
+                    * https://www.youtube.com/watch?v=VYpAodcdFfA
+                    * https://www.youtube.com/watch?v=XIpui7lvjEg
+            * article 
+                * here> transfer learning for time-series prediction
+                    * here> https://towardsdatascience.com/transfer-learning-for-time-series-prediction-4697f061f000
+                * flow forecast
+                    * https://towardsdatascience.com/transfer-learning-for-time-series-forecasting-51f023bc159c
+            * others
+                * google search
+                    * https://www.google.com/search?q=transfer+learning+from+clustering&rlz=1C1CHBF_enUS941US941&oq=transfer+learning+from+clustering&aqs=chrome..69i57j0i22i30.5826j0j7&sourceid=chrome&ie=UTF-8 
 # RELATED WORK
 * Article: transfer learning: the dos and don'ts
     * In general use [[differential leraning rate]], because, in practce, there are too many options to freeze
@@ -151,6 +175,7 @@
 
 # METHODOLOGY
 
+
 ## Step by Step
 1. Graph based Learning
     * description
@@ -177,7 +202,8 @@
         * this process satisfy smoothness requirements of the model.
     3.1 aggregating process
         * description
-            * aggregate similar trend into 1. Inuitively, it is trying capture intrinsic trend of infection growth from group of similar cases.
+            * aggregate similar trend into 1. Inuitively, it is trying capture intrinsic trend of infection
+                growth from group of similar cases.
         3.1.1. applying rolling mean on each trend.
         3.1.2. apply means to each group.
         3.1.3. (optional) validate that aggregating is succesful by checking if trend properties are retained.
@@ -195,6 +221,40 @@
              * description
                   * this step will predict individual trend.
 
+## MY MODEL DESIGN
+### sytem requirement
+    * the model must use as many types of network as possible
+    * the model must use transfer learning
+        * to tranfer learned knowledge about "stage" of the pandemic spread
+            * transfer knowledge about first wave to second wave
+            * transfer knowledge from one location to another location
+    * the model must do nodes and edges attention
+        * node attention 
+            * weight between neighbor nodes and target node
+            * eg GAT
+        * edge attention is 
+            * weight between target nodes and its neighbor
+    * the model must deal with few dataset
+    * the model must deal with noisy data
+
+### possible input data
+    * non-graph input
+        * demographics
+        * economics
+        * politics
+        * covid cases 
+        * traffic
+        * airplain
+        * news
+    * types of network (network dataset)
+        * mobility
+        * correlation network
+        * weather newtork
+        * social connectedness network
+        * colocation network 
+        * geographic similarity
+
+
 # RESULT
 * Q1: Is DeepCovid able to anticipate trend changes?
 * Q2. Does DeepCovid capture finer grain patterns?
@@ -202,4 +262,10 @@
 * Q4. does DeepCovid's emphasis on short -term forecastin scarifice longer-term performance?
 * Q5. Can DeepCovid explains its prediction to epidemiological exports for interpretation?
 # FREQUENCY ASK QUESTION 
+* when to model product to predict rate of change (roc), new cases, number of total case?
+    * what is the covid19 kaggle competition predicting target?
+* what is calibration?
+* how to apply transfer learning on the same task but different scale? 
+    * features from smaller scale combined to create feature of the larger scale
+* transfer learning from simulated dataset
 

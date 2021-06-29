@@ -13,6 +13,7 @@
     * policies
     * recommendation for the control of the outbreak
     * challenges that exists in the forecasting models
+
 # Content (to be futhur classified into started H1 topic)
 * Epidemiolocgic triad
     * Environmental factors

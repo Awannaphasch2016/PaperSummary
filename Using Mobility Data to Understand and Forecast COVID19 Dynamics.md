@@ -1,4 +1,12 @@
 # INTRODUCTION
+# CITATION 
+@article{wang2020using,
+  title={Using Mobility Data to Understand and Forecast COVID19 Dynamics},
+  author={Wang, Lijing and Ben, Xue and Adiga, Aniruddha and Sadilek, Adam and Tendulkar, Ashish and Venkatramanan, Srinivasan and Vullikanti, Anil and Aggarwal, Gaurav and Talekar, Alok and Chen, Jiangzhuo and others},
+  journal={medRxiv},
+  year={2020},
+  publisher={Cold Spring Harbor Laboratory Press}
+}
 # REFERENCES
 * url
     * https://www.medrxiv.org/content/10.1101/2020.12.13.20248129v1.full.pdf

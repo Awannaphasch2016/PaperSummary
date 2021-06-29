@@ -2,6 +2,15 @@
 # REFERENCES
 * url 
     * https://arxiv.org/pdf/2102.08122.pdf
+
+# citation
+@article{zhang2021dynamic,
+  title={Dynamic Virtual Graph Significance Networks for Predicting Influenza},
+  author={Zhang, Jie and Zhou, Pengfei and Wu, Hongyan},
+  journal={arXiv preprint arXiv:2102.08122},
+  year={2021}
+}
+
 # TERMINOLOGY
 # RELATED WORK
 # KEY CONTRIBUTION

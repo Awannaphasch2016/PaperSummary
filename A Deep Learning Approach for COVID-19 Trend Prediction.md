@@ -1,4 +1,6 @@
-# note to self: no smaller detail. only big picture. smaller detail should be 
+#+TITLE: testing
+
+# note to self: no smaller detail. only big picture. smaller detail should be
 * read from the paper itself
 # introduction
 * extreme lockdown is shown to be very effective to slow down the spread of SARS-COV2
@@ -7,10 +9,10 @@
 * cc = confirmed cases
 * dc = new confirmed cases
     * we pro-process each of them into two series:
-        * one contains values only when thre is restriction policy undergoing
-            * cc_res and dc_rest
-        * another only contains value when thiere is no restriction policy
-            * cc_nores and dc_nores
+      * one contains values only when thre is restriction policy undergoing
+        * cc_res and dc_rest
+      * another only contains value when thiere is no restriction policy
+        * cc_nores and dc_nores
 * state demographics embedding
 # how the author come up with their ideas?
 * problem with using SIR and the nature of reported data

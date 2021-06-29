@@ -1,4 +1,15 @@
 :dynamic graph neural network:spatial attention:
+
+# citation
+
+@inproceedings{deng2020cola,
+  title={Cola-GNN: Cross-location Attention based Graph Neural Networks for Long-term ILI Prediction},
+  author={Deng, Songgaojun and Wang, Shusen and Rangwala, Huzefa and Wang, Lijing and Ning, Yue},
+  booktitle={Proceedings of the 29th ACM International Conference on Information \& Knowledge Management},
+  pages={245--254},
+  year={2020}
+}
+
 # REFERENCE  
 * url
     * https://dl.acm.org/doi/pdf/10.1145/3340531.3411975?casa_token=Y1z6Ah7SqZoAAAAA:pqgVk23Anq9o5TiZ6BtyysPPF1uGsP8nAhT92vGPlr2NiHgt6a7xG-MWzLKLU_f2-lBAC1L02CnF4w
@@ -119,6 +130,7 @@
 # methodology
 * goal
     * focus on longer term (2-15 weeks) prediction from 20 weeks of data
+
 * architecture
     * 3 modules
         * location-aware attention 

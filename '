@@ -1,0 +1,167 @@
+*  #[[Research Paper]]
+    - URL:
+    - Citation
+    - Status::
+        - Tags::: #[[Multiplex networks]] #[[Graph mining]] #[[Epidemic contagion]] #[[Node immunization]] #[[Multilayer networks]]
+            - [[Paper Keywords]]: 
+                - Author::
+    - [[Publication]]:
+    - [[Published Date]]:
+    - [[Date Submitted by the Author]]:
+    - Content:: (link to saved copy in Pocket)
+    - Abstract::
+    - [[You May Want to See Also]]
+
+* [[Research Paper]] (Non Survey Paper)
+    - [[Table of Content]]
+    - [[Note to self]]
+        * put multiplex graph in the survey paper
+    - [[Citation]]
+    - [[Summary]]
+        * note 
+            * only apply to paper that pass first read.
+        * Tags:: (Complete citation: Key Words: General subject: Specific subject:)
+        * [[Use case: What is take away knowledge that you can use in your work?]]
+        * [[Related work: what are referenced papers that closely related to the paper?]]
+        * [[Data: what is data characteristic?]]
+        * [[Technique: what are technique used in the paper?]] 
+        * [[Context: what's the context for the paper]]
+            * [[Application Domain]]
+                * note
+                    * basically "task" but expand to include whole domain application (use case).
+            * [[Problem: What are exact problems that it solve?]]
+            * [[Hypothesis]]
+            * [[Methodology results]]
+            * [[what idea does the paper expand further?]]
+            * [[Concept: what's the key contribution of the paper]]
+                * note 
+                    * concept answers 'what' paper does to solve the problem.
+            * [[Implemntation: how does the paper implement thier core idea?]]
+                * note
+                    * implementation answers 'how' paper solve the problem.
+                    * 'implementation' doesn't refer to the exact implementation, rather 'implementation' refers to 'how' authors materialize their core ideas. (key contribution)
+            * [[Significance (to the field; in relation to your own work):]]
+            * [[Relevance: How is this relevant to you own work?]]
+                * note
+                    * make note only when you are working on something.
+                    * explain your goal and what you are working on, then explain what can be helpful.
+            * [[Visual: Important Figures and/or Tables (brief description; page number):]]
+        * [[criticisms of the work]]
+    * [[any other thoughts/comments]]
+    - [[Introduction]]
+        * Constructing effective and scalable protection strategies over epidemic propagation is
+        a challenging issue. It has been attracting interests in both theoretical and empirical
+        studies. However, most of the recent developments are limited to the simplified
+        single-layered network
+            * . Multiplex social networks are social networks with multiple
+            layers where the same set of nodes appear in different layers. Consequently, a single
+            attack can trigger simultaneous propagation in all corresponding layers
+                * Therefore,
+                suppressing propagation in multiplex topologies is more challenging given the fact
+                that each layer also has a different structure
+        * Real-world networks reveal the existence of multiple levels relationships. For instance,
+        in social networks, an individual can possess membership of several communities which
+        range in different functionalities from intimate (e.g., families, friends, clubs) to more serious (e.g., businesses, schools)
+            * In social networks, one can categorize edges based on the
+            nature of the relationships (i.e., ties) or actions that they represent (Kivela et al. 2014).
+            Reducing a social system to a network in which actors are connected in a pairwise fashion
+            by only a single type of relationship is often a crude approximation of reality.
+            * Furthermore,
+            the current insights in complex network analysis does not only consider networks as isolated graphs, but also characterizes how a network interacts with other networks and how
+            this interaction affects epidemic spreading that occur on top of them (Kivela et al. 2014).
+    - [[Summary]]
+    * [[Future Read]]
+        * multiplex network 
+            * Kivela M, Arenas A, Barthelemy M, Gleeson JP, Moreno Y, Porter MA (2014) Multilayer networks. J Complex Netw
+            2(3):203–271
+            * Epidemic outbreak for an sis model in multiplex networks with immunization
+        * model that solve the same problem
+            *             * We find that MULTIPLEXSHIELD is scalable for large graphs and gives more effective protection compared with other competing
+                        methods such as Acquaintance Vaccination (AV) (Wang et al. 2015), Targeted Immunization Method (TIM) (Buono and Braunstein 2015), SpreadingDegree (Zhao et al. 2014) and
+                                    Random Immunization (Zuzek et al. 2015; Wu et al. 2016; Zhao et al. 2014).
+
+    - [[Key Contribution]]
+        * We formalize the problem of suppressing propagation spreading in multiplex network by
+        allocating protection resources throughout the different network layers. We define the
+        Multiplex Graph Protection Problem as a discrete combinatorial optimization
+        * We also
+        introduce that the problem is NP-Hard. To the best of our knowledge, we are the first to
+        analyze the hardness of this multiplex graph protection problem.
+        * Furthermore, we also
+        specify two different protection scheme to consider different epidemic spreading scenario
+        in multiplex networks.
+        * We develop an effective and scalable algorithm to suppress the epidemics spreading on
+        multiplex networks, called MULTIPLEXSHIELD
+            * We find that MULTIPLEXSHIELD is scalable for large graphs and gives more effective protection compared with other competing
+            methods such as Acquaintance Vaccination (AV) (Wang et al. 2015), Targeted Immunization Method (TIM) (Buono and Braunstein 2015), SpreadingDegree (Zhao et al. 2014) and
+            Random Immunization (Zuzek et al. 2015; Wu et al. 2016; Zhao et al. 2014).
+            * We also show that
+            MULTIPLEXSHIELD is scalable with respect to the changing of graph size in terms of
+            number of nodes and edges, which means it is suitable for large size graphs.
+        - Finding
+            - {{query: {and: [Finding][Name of this Paper]}}}
+    - [[Grounded Claim]] 
+    - [[Future Direction]]
+    - [[Standard/Benchmark]]
+        - [[Data]]
+    - [[Tool]]
+    - [[Related Work]]
+        * [[Graph Protection]]
+            * Most of the recent work in graph protection focused on the single-layered graph
+            and does not provide much consideration on multiplex topologies.
+                *  In single-layered
+                graph protection scheme, there are two common approaches: pre-emptive and postemptive protection
+                    * pre-emptive protection
+                        * matrix perturbation 
+                            * Two pre-emptive algorithms have been proposed, called NetShield
+                            (Tong et al. 2010) and Netshield+ (Chen et al. 2016) which employ the properties of
+                            matrix perturbation to find a set of nodes to be immunized (Tong et al. 2010).
+                    * post-emptive protection
+        * [[influence maximization]]
+        * [[influence blocking maximization]]
+    - [[Defining Equation, Notation, Terminology, Theory, and Law]]
+        -[[Terminology]]
+            * center
+                * We consider nodes that having the highest degree centrality role as centers.
+            * bridges
+                * We also assume nodes with
+                the highest value of connectivity, measured by random walk normalized Fiedler vector
+                (von Luxburg 2007), as bridges
+            -[[Notation]]    
+    - [[How does researcher think of this research idea?]]
+    - Challenges
+        - [[Challenges]]
+        -  {[[query]]: {and: [[Challenges]] [[Name of this paper]]}}
+    - [[Approach]]
+        - [[Purpose]]
+        - [[Tasks]]
+            * Given a multiplex graph, such as a
+            social network, and k budget of protection resources, we aim to protect a set of nodes
+            such that the percentage of survived nodes at the end of epidemics is maximized
+                * We define the
+                Multiplex Graph Protection Problem as a discrete combinatorial optimization
+        - [[Evaluation]]
+        - [[Architecture]]
+            * Thus, the protection scheme in multiplex networks can be classified into two basic
+            classes: multiplex-based and layer-based node protection schemes. Figure 1 illustrates
+            this classification
+            * The goal of our work is to develop an effective and efficient method that is scalable
+                    for protecting multiplex networks.
+                    * Firstly, we allocate a novel nodes importance ranking
+                    score which combines the benefit of algebraic connectivity and degree centrality of graph
+                    structure
+                    * 
+            * This node score consists of the corresponding random walk normalized Fiedler vector of nodes in graph, degree value, and
+            layer-wise epidemic stochastic propagation rate.
+            * We use SIS model in our work. In SIS
+            propagation model (Gray et al. 2011), we calculate the stochastic propagation rate from
+            the ratio between the infection probability of one node to infect its neighbor and the
+            recovery probability of infected node. This rate represents the strength of propagation
+            and exhibits how quick the epidemics will spread. Prakash et al. (2011) showed that the
+            strength of propagation in SIS model, as well as in SIR, SIRS, and SEIR model depends on
+            this rate
+
+    - #[[Experiments, Results and Analysis]] #[[Finding]]
+    - [[Frequently Ask Questions]]
+         - {{query: {and: [Validate] [Name of the Page]}}}
+    - [[Paper Reference]]
